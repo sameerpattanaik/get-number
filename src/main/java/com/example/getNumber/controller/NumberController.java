@@ -1,6 +1,5 @@
 package com.example.getNumber.controller;
 
-import com.example.getNumber.beans.NumberService;
 import com.example.getNumber.serviceimpl.GetNumberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,11 +12,11 @@ import java.util.List;
 public class NumberController {
 
     @Autowired
-    NumberService numberService;
+    GetNumberService getNumberService;
 
     @GetMapping("/getNumber")
     public List<Integer> getNumber() throws FileNotFoundException {
-        return numberService.getServiceImpl();
+        return getNumberService.numberImpl();
     }
 
 }
