@@ -1,5 +1,6 @@
-package com.example.getNumber.serviceimpl;
+package com.example.getNumber.serviceimpl.impl;
 
+import com.example.getNumber.serviceimpl.GetNumber;
 import org.springframework.stereotype.Service;
 
 import java.io.File;
@@ -10,7 +11,7 @@ import java.util.Scanner;
 
 
 @Service
-public class GetNumberService {
+public class GetNumberService implements GetNumber {
     public List<Integer> numberImpl() throws FileNotFoundException {
         File file = new File(System.getProperty("user.dir") + "/src/main/resources/number.txt");
         Scanner scanner = new Scanner(file);
